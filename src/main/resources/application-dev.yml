@@ -1,0 +1,16 @@
+spring:
+  aop:
+    proxy-target-class: true
+    auto: true
+  mvc:
+    throw-exception-if-no-handler-found: true
+influx:
+  open_url: http://${JT_INFLUXDB_HOST_DEV:127.0.0.1}:${JT_INFLUXDB_PORT:8086}
+  username: ${INFLUX_USER:admin}
+  password: ${INFLUX_PWD:123456}
+  database: sfjk_dev
+  retention_policy: autogen
+  retention_policy_time: 0s
+sfjk200:
+  address: 1
+  function: 3
